@@ -1,1 +1,60 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
+body{
+  background:linear-gradient(135deg,#ff9ecf,#ffd6e7);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  overflow:hidden;
+  font-family:Arial,sans-serif;
+}
+
+.container{
+  text-align:center;
+}
+
+.envelope{
+  width:220px;
+  cursor:pointer;
+  transition:.5s;
+}
+
+.envelope:hover{
+  transform:scale(1.05);
+}
+
+.hidden{
+  display:none;
+}
+
+.photo{
+  width:260px;
+  border-radius:15px;
+  margin-top:20px;
+  box-shadow:0 0 20px rgba(0,0,0,.3);
+  animation:fade 1s;
+}
+
+.message{
+  color:white;
+  font-size:32px;
+  margin-top:20px;
+  font-weight:bold;
+  animation:fade 2s;
+}
+
+@keyframes fade{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
