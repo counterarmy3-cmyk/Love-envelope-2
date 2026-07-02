@@ -8,28 +8,25 @@ const photos = [
   "photo3.png"
 ];
 
-let index = 0;
-
-envelope.addEventListener("click", () => {
-  document.getElementById("envelope").style.display = "none";
+envelope.onclick = function () {
+  envelope.style.display = "none";
   photo.classList.remove("hidden");
-  showPhotos();
-});
 
-function showPhotos() {
-  photo.src = photos[index];
+  let i = 0;
 
-  setTimeout(() => {
-    index++;
+  function nextPhoto() {
+    photo.src = photos[i];
 
-    if (index < photos.length) {
-      showPhotos();
+    if (i < photos.length - 1) {
+      i++;
+      setTimeout(nextPhoto, 2500);
     } else {
       setTimeout(() => {
         photo.style.display = "none";
         message.classList.remove("hidden");
-        message.innerHTML = "❤️ I Love You Sona ❣️ ❤️";
       }, 2500);
     }
-  }, 2500);
-}
+  }
+
+  nextPhoto();
+};
