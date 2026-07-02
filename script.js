@@ -3,9 +3,9 @@ const photo = document.getElementById("photo");
 const message = document.getElementById("message");
 
 const photos = [
-  "Photo1.jpg",
-  "Photo2.jpg",
-  "Photo3.png"
+  "photo1.jpg",
+  "photo2.jpg",
+  "photo3.png"
 ];
 
 let index = 0;
