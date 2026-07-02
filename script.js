@@ -1,1 +1,35 @@
+const envelope = document.getElementById("envelope");
+const photo = document.getElementById("photo");
+const message = document.getElementById("message");
 
+const photos = [
+  "Photo1.jpg",
+  "Photo2.jpg",
+  "Photo3.png"
+];
+
+let index = 0;
+
+envelope.addEventListener("click", () => {
+  envelope.style.display = "none";
+  photo.classList.remove("hidden");
+  showPhotos();
+});
+
+function showPhotos() {
+  photo.src = photos[index];
+
+  setTimeout(() => {
+    index++;
+
+    if (index < photos.length) {
+      showPhotos();
+    } else {
+      setTimeout(() => {
+        photo.style.display = "none";
+        message.classList.remove("hidden");
+        message.innerHTML = "❤️ I Love You Sona ❣️ ❤️";
+      }, 2500);
+    }
+  }, 2500);
+}
