@@ -11,7 +11,7 @@ const photos = [
 let index = 0;
 
 envelope.addEventListener("click", () => {
-  envelope.style.display = "none";
+  document.getElementById("envelope").style.display = "none";
   photo.classList.remove("hidden");
   showPhotos();
 });
