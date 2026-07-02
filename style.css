@@ -58,3 +58,13 @@ body{
     transform:translateY(0);
   }
 }
+.envelope{
+    font-size:120px;
+    cursor:pointer;
+    transition:0.4s;
+    user-select:none;
+}
+
+.envelope:hover{
+    transform:scale(1.1);
+}
